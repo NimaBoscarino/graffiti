@@ -1,9 +1,12 @@
 import React, {Component} from 'react';
+import Wall from './Wall.jsx'
+
+const messages = ['hello']
 
 class App extends Component {
   render() {
     return (
-      <h1>Hello React :)</h1>
+      <Wall messages={messages}/>
     );
   }
 }
