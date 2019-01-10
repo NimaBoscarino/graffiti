@@ -11,7 +11,8 @@ wss.on('connection', function connection(ws) {
 
     messages.push(JSON.parse(message))
 
-    ws.send(JSON.stringify(messages))
+    // ws.send(JSON.stringify(messages))
+    wss.clients.forEach(c => c.send(JSON.stringify(messages)))
   });
 
   ws.send(JSON.stringify(messages))
